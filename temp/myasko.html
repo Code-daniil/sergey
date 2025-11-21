@@ -17,10 +17,14 @@
     </div>
 
 
-        <a href="../index.html" class="logo"><img src="../img/logo.jpg" alt="" class="logo_img"></a>
+
                
 
         <div class="scroll-container">
+            <button class="back-btn" onclick="history.back()"></button>
+
+
+
             <section class="screen">
                 <img src="../img/food photo_DSC08278.JPG" class="food" alt="">
                 <input type="checkbox" id="toggle-1" class="toggle">
@@ -41,6 +45,7 @@
 							</ul>
 				</div>
                 <div class="product-border"></div>
+                <label class="close-overlay" for="toggle-1" aria-label="close menu"></label>
                 <div class="background">
 							<div class="svg-container">
 								<p class="price">2800</p>
@@ -49,10 +54,14 @@
 				</div>
             </section>
 
+
              <section class="screen">
                 <img src="../img/food photo_DSC08278.JPG" class="food" alt="">
+                <!-- меняется фотка -->
                 <input type="checkbox" id="toggle-2" class="toggle">
+                <!-- чтобы все работало под каждую карточку нужна своя цифра -->
                 <label id="toggle_id" for="toggle-2"> </label>
+                <!-- чтобы все работало под каждую карточку нужна своя цифра -->
                 <div class="product-name">
 							<h2 class="product-font">Fried chick</h2>
 							<ul class="ingredients">
@@ -67,13 +76,17 @@
 								<li>fries chick</li>
 								<li>served with fries and ketchup</li>
 							</ul>
+                            <!-- меняются ингридиенты и тд -->
 				</div>
                 <div class="product-border"></div>
+                <label class="close-overlay" for="toggle-2" aria-label="close menu"></label>
+                <!-- чтобы все работало под каждую карточку нужна своя цифра -->
                 <div class="background">
-							<div class="svg-container">
-								<p class="price">2800</p>
-								<p class="price currency">AMD</p>
-							</div>
+					        <div class="svg-container">
+						        <p class="price">2800</p>
+                                <!-- меняется цена -->
+						        <p class="price currency">AMD</p>
+					        </div>
 				</div>
             </section>
             
