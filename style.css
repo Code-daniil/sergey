@@ -6,6 +6,13 @@
 
 /* Главная страница */
 
+.body{
+    background-image: url(img/back2.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 2000px;
+}
+
 .logo{
     text-align: center;
     display: flex;
@@ -42,7 +49,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
     padding-top: 20px;
     left: 0;
     top: 100px;
@@ -58,7 +64,7 @@
     padding-inline: 20px;
     color: white;
     font-size: 60px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Aladin", system-ui;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -93,21 +99,16 @@
 #toggle_id {
     position: absolute;
     z-index: 12;
-    width: 420px;
-    height: 420px;
-    top: -140px;
-    left: -150px;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .product-name {
+    text-align: center;
     transition: all 0.5s ease;
     position: absolute;
-    background-color: #8094567c;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Aladin", system-ui;
     z-index: 5;
-    width: 420px;
     height: 420px;
     /* transform: translate(100px, 220px); */
     top: -140px;
@@ -115,34 +116,21 @@
     border-radius: 50%;
 }
 
-.product-border {
-    transition: all 0.5s ease;
-    position: absolute;
-    background-color: rgb(255, 253, 135);
-    z-index: 4;
-    width: 428px;
-    height: 428px;
-    /* transform: translate(90px, 220px); */
-    top: -140px;
-    left: -145px;
-    border-radius: 50%;
-}
 
 .background {
+    border-radius: 500px 500px 0px 0px;
+    text-align: center;
     transition: all 0.5s ease;
     z-index: 9;
     position: absolute;
-    background-color: rgb(247, 249, 204);
-    right: -180px;
-    bottom: -180px;
-    border-radius: 50%;
-    width: 400px;
-    height: 380px;
+    background-color: rgb(191 191 180);
+    width: 500px;
+    height: 70px;
 }
 
 .product-font {
     transition: all 0.5s ease;
-    margin: 214px 58px 33px 216px;
+    margin: 280px 58px 33px 216px;
     font-size: 42px;
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
@@ -150,19 +138,19 @@
 
 .ingredients {
     z-index: 1000;
-    transition: all 0.5s 
-ease;
+    transition: all 0.5s ease;
     color: black;
     opacity: 0;
     transform: translateX(50px);
 }
 
 .svg-container {
+    text-align: center;
     display: flex;
     position: absolute;
     height: 60px;
-    top: 90px;
-    left: 30px;
+    top: 8px;
+    left: 195px;
 }
 
 .price {
@@ -171,7 +159,7 @@ ease;
     justify-content: center;
     align-items: center;
     /* position: absolute; */
-    font-family: sans-serif;
+    font-family: "Aladin", system-ui;
     color: #272727;
     font-size: 50px;
     font-weight: 1000;
@@ -191,6 +179,7 @@ ease;
     z-index: 1000;
     font-size: 25px;
     opacity: 1;
+    text-align: left;
 }
 
 .scroll-container .screen .toggle:checked~.product-border {
@@ -203,7 +192,9 @@ ease;
 }
 
 .scroll-container .screen .toggle:checked~.product-name .product-font {
-    margin: 40px 50px 0px 50px;
+    width: 154px;
+    left: 8px;
+    margin: 39px 220px 0px 50px;
 }
 
 
@@ -212,7 +203,7 @@ ease;
     width: 100vw;
     height: 100vh;
     border-radius: 0;
-    top: 0;
+    top: 100px;
     left: 0;
     z-index: 10;
 }
@@ -227,7 +218,7 @@ ease;
 }
 
 
-  .close-overlay {
+.close-overlay {
     display: none;              
     position: fixed;           
     inset: 0;                
@@ -236,14 +227,15 @@ ease;
     background: rgba(0,0,0,0);  
 }
 
-  .toggle:checked ~ .close-overlay {
+.toggle:checked ~ .close-overlay {
     display: block;
+
 }
 
 .back-btn {
     position: fixed;
-    bottom: 20px; 
-    left: 20px;   
+    top: 4px;
+    left: 8px;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -266,23 +258,40 @@ ease;
 }
 
 
-/* Пульсация круга */
+@keyframes rotate-shake-pause {
+    0%   { transform: rotate(0deg); }
+    8%   { transform: rotate(18deg); }   /* резче вправо */
+    16%  { transform: rotate(0deg); }
+    24%  { transform: rotate(-18deg); }  /* резче влево */
+    32%  { transform: rotate(0deg); }
 
-.product-name {
-    animation: pulseCircle 2s infinite ease-in-out;
-    will-change: transform;
-    transform: translateZ(0);
+    /* пауза */
+    100% { transform: rotate(0deg); }
 }
 
-@keyframes pulseCircle {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.04); }
-    100% { transform: scale(1); }
+.icon {
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+
+    animation: rotate-shake-pause 1.3s infinite ease-in-out;
+}
+.food {
+  transition: filter 1.3s ease;
 }
 
-.scroll-container .screen .toggle:checked ~ .product-name {
-    animation: none !important;
+.food.blurred {
+  filter: blur(6px);
 }
+
+
+
 
 
 
