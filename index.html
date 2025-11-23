@@ -15,7 +15,15 @@
     <div class="preloader">
         <img src="img/loading.jpg" class="logo_img" alt="">
     </div>
+    <button class="lang-btn" id="langBtn">
+    <span id="langText">EN</span>
+    <span class="arrow">▼</span>
+</button>
 
+<div class="lang-menu" id="langMenu">
+    <div data-lang="en">EN</div>
+    <div data-lang="am">AM</div>
+</div>
 
         <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo_img"></a>
         
@@ -26,7 +34,7 @@
                 <a href="temp/myasko.html">
                 <div class="menu_img">
                     <img src="img/food photo_DSC08116.JPG" alt="" class="block_img">
-                    <h2 class="text_menu">Мяско</h2>
+                    <h2 class="text_menu" data-en="Meat" data-am="Միս">Мяско</h2>
                 </div>
                 </a>
                 <a href="drinks/drinks.html">
@@ -102,8 +110,7 @@
         </div>
 
 
-
         <script src="index.js"></script>
-
+        <script src="lang.js"></script>
     </body>
 </html>

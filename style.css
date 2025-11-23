@@ -76,7 +76,7 @@
     color: white;
     font-size: 60px;
     font-family: "Aladin", system-ui;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 4px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* Еда в меню */
@@ -481,3 +481,66 @@
     font-family: "Aladin", system-ui;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+
+
+.lang-btn {
+    position: fixed;
+    top: 13px;
+    left: 8px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 30;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.lang-btn .arrow {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+/* Выпадающее меню */
+.lang-menu {
+    position: fixed;
+    top: 65px; 
+    left: 10px;
+    width: 70px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 6px 0;
+    display: none;
+    flex-direction: column;
+    z-index: 31;
+}
+
+.lang-menu div {
+    padding: 8px 0;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+    font-family: "Aladin", system-ui;
+}
+
+.lang-menu div:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+#langText{
+    font-family: "Aladin", system-ui;
+}
+
