@@ -135,16 +135,51 @@
     border-radius: 50%;
 }
 
-
-.background {
-    border-radius: 500px 500px 0px 0px;
+.background1 {
+        margin: 0px 213px 108px 220px;
+    border-radius: 99px;
+    top: 19%;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 30;
+    backdrop-filter: blur(4px);
     text-align: center;
     transition: all 0.5s ease;
     z-index: 9;
     position: absolute;
-    background-color: rgb(79 78 78 / 70%);
-    width: 543px;
-    height: 153px;
+    height: 43px;
+    padding: 39px 117px;
+}
+
+
+.background {
+    margin: 0px 220px 120px 220px; 
+    border-radius: 99px;
+    bottom: 1%;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 30;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    transition: all 0.5s ease;
+    z-index: 9;
+    position: absolute;
+    height: 86px;
+    padding: 56px 177px;
+}
+.scroll-container .screen .toggle:checked~.product-name .product-font1 {
+    text-align: left;
+    width: 154px;
+    left: 8px;
+    margin: 39px 220px 0px 50px;
+}
+
+.product-font1 {
+    transition: all 0.5s ease;
+    margin: 216px 43px 33px 216px;
+    font-size: 42px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
 }
 
 .product-font {
@@ -164,17 +199,53 @@
 }
 
 .svg-container {
+    border-radius: 33%;
+    text-align: center;
+    /* background-color: #4f4f4f; */
     text-align: center;
     display: flex;
     position: absolute;
-    height: 60px;
-    top: 29px;
-    left: 213px;
+    /* height: 63px; */
+    bottom: 11px;
+    left: 36%;
+    /* backdrop-filter: blur(4px); */
+    margin: 0 !important;
+    justify-content: center;
+    font-family: "Aladin", system-ui;
+    color: #dddddd;
+    font-size: 38px;
+    font-weight: 1000;
+    top: 27px;
+    left: 120px;
+    align-items: baseline;
+}
+
+.svg-container1 {
+    border-radius: 33%;
+    text-align: center;
+    /* background-color: #4f4f4f; */
+    text-align: center;
+    display: flex;
+    position: absolute;
+    /* height: 63px; */
+    bottom: 11px;
+    left: 36%;
+    /* backdrop-filter: blur(4px); */
+    margin: 0 !important;
+    justify-content: center;
+    font-family: "Aladin", system-ui;
+    color: #dddddd;
+    font-size: 38px;
+    font-weight: 1000;
+    top: 14px;
+    left: 69px;
+    align-items: flex-end;
+
 }
 
 .price {
-    color: rgb(255, 255, 255);
-    text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
+    color: rgb(255 255 255);
+    text-shadow: 4px 0 rgb(0 0 0), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(0 0 0);
     /* display: flex; */
     margin: 0 !important;
     justify-content: center;
@@ -186,10 +257,35 @@
     font-weight: 1000;
     top: 20px;
     left: 60px;
+
+}
+
+.price1 {
+    color: rgb(255 255 255);
+    text-shadow: 4px 0 rgb(0 0 0), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(0 0 0);
+    /* display: flex; */
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    font-family: "Aladin", system-ui;
+    /* color: #dddddd; */
+    font-size: 44px;
+    font-weight: 1000;
+    top: 20px;
+    left: 60px;
+
 }
 
 .currency {
     font-size: 20px;
+    top: 70px;
+    left: 50px;
+    align-content: end;
+}
+
+.currency1 {
+    font-size: 16px;
     top: 70px;
     left: 50px;
     align-content: end;
@@ -225,6 +321,30 @@
     height: 100vh;
     border-radius: 0;
     top: 100px;
+    left: 0;
+    z-index: 10;
+}
+
+.product-name1 {
+    text-align: center;
+    transition: all 0.5s 
+ease;
+    position: absolute;
+    font-family: "Aladin", system-ui;
+    z-index: 5;
+    height: 420px;
+    /* transform: translate(100px, 220px); */
+    top: -140px;
+    left: -150px;
+    border-radius: 50%;
+}
+
+
+.scroll-container .screen .toggle:checked+label+.product-name1 {
+    transition: all 0.5s ease;
+    height: 100vh;
+    border-radius: 0;
+    top: 272px;
     left: 0;
     z-index: 10;
 }
