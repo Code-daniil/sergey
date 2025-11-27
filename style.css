@@ -58,19 +58,6 @@
     border-radius: 20px;
 }
 
-/* .block_menu{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-} */
-
 .text_menu{
     width: 100%;
     white-space: normal;     
@@ -124,14 +111,14 @@
 
 .product-name {
     text-align: center;
+    width: 100%;
+    text-align: center;
     transition: all 0.5s ease;
     position: absolute;
     font-family: "Aladin", system-ui;
     z-index: 5;
     height: 420px;
-    /* transform: translate(100px, 220px); */
     top: -140px;
-    left: -150px;
     border-radius: 50%;
 }
 
@@ -155,7 +142,7 @@
 .background {
     margin: 0px 220px 120px 220px; 
     border-radius: 99px;
-    bottom: 1%;
+    bottom: -7.5%;
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     z-index: 30;
@@ -176,7 +163,7 @@
 
 .product-font1 {
     transition: all 0.5s ease;
-    margin: 216px 43px 33px 216px;
+    margin: 216px 43px 33px 60px;
     font-size: 42px;
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
@@ -184,10 +171,10 @@
 
 .product-font {
     transition: all 0.5s ease;
-    margin: 280px 58px 33px 216px;
-    font-size: 42px;
+    margin: 245px 0px 11px 0px;
+    font-size: 60px;
     color: rgb(255, 255, 255);
-    text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
+    text-shadow: 6px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
 }
 
 .ingredients {
@@ -201,14 +188,11 @@
 .svg-container {
     border-radius: 33%;
     text-align: center;
-    /* background-color: #4f4f4f; */
     text-align: center;
     display: flex;
     position: absolute;
-    /* height: 63px; */
     bottom: 11px;
     left: 36%;
-    /* backdrop-filter: blur(4px); */
     margin: 0 !important;
     justify-content: center;
     font-family: "Aladin", system-ui;
@@ -223,14 +207,11 @@
 .svg-container1 {
     border-radius: 33%;
     text-align: center;
-    /* background-color: #4f4f4f; */
     text-align: center;
     display: flex;
     position: absolute;
-    /* height: 63px; */
     bottom: 11px;
     left: 36%;
-    /* backdrop-filter: blur(4px); */
     margin: 0 !important;
     justify-content: center;
     font-family: "Aladin", system-ui;
@@ -246,13 +227,10 @@
 .price {
     color: rgb(255 255 255);
     text-shadow: 4px 0 rgb(0 0 0), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(0 0 0);
-    /* display: flex; */
     margin: 0 !important;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
     font-family: "Aladin", system-ui;
-    /* color: #dddddd; */
     font-size: 50px;
     font-weight: 1000;
     top: 20px;
@@ -263,13 +241,10 @@
 .price1 {
     color: rgb(255 255 255);
     text-shadow: 4px 0 rgb(0 0 0), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(0 0 0);
-    /* display: flex; */
     margin: 0 !important;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
     font-family: "Aladin", system-ui;
-    /* color: #dddddd; */
     font-size: 44px;
     font-weight: 1000;
     top: 20px;
@@ -310,7 +285,7 @@
 
 .scroll-container .screen .toggle:checked~.product-name .product-font {
     text-align: left;
-    width: 154px;
+    width: 230px;
     left: 8px;
     margin: 39px 220px 0px 50px;
 }
@@ -327,15 +302,13 @@
 
 .product-name1 {
     text-align: center;
-    transition: all 0.5s 
-ease;
+    transition: all 0.5s ease;
     position: absolute;
     font-family: "Aladin", system-ui;
     z-index: 5;
     height: 420px;
-    /* transform: translate(100px, 220px); */
     top: -140px;
-    left: -150px;
+    /* left: -150px; */
     border-radius: 50%;
 }
 
@@ -370,7 +343,6 @@ ease;
 
 .toggle:checked ~ .close-overlay {
     display: block;
-
 }
 
 .back-btn {
@@ -401,12 +373,10 @@ ease;
 
 @keyframes rotate-shake-pause {
     0%   { transform: rotate(0deg); }
-    8%   { transform: rotate(18deg); }   /* резче вправо */
+    8%   { transform: rotate(18deg); }  
     16%  { transform: rotate(0deg); }
-    24%  { transform: rotate(-18deg); }  /* резче влево */
+    24%  { transform: rotate(-18deg); }  
     32%  { transform: rotate(0deg); }
-
-    /* пауза */
     100% { transform: rotate(0deg); }
 }
 
@@ -420,9 +390,9 @@ ease;
     border: none;
     cursor: pointer;
     z-index: 30;
-
     animation: rotate-shake-pause 1.3s infinite ease-in-out;
 }
+
 .food {
   transition: filter 1.3s ease;
 }
@@ -430,11 +400,6 @@ ease;
 .food.blurred {
   filter: blur(6px);
 }
-
-
-
-
-
 
 /* 1. */
 /* Загрузка крутится по своей оси */
@@ -445,7 +410,7 @@ ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white; /* или любой ваш фон */
+    background: white; 
     z-index: 9999;
 }
 
@@ -465,37 +430,7 @@ ease;
     transition: opacity 0.6s ease;
 }
 
-/* 2. */
-/* Загрузка по кругу */
-
-/* .loading .logo_img {
-    width: 200px;
-    animation: spinRight 3s linear infinite;  
-} */
-
-/* @keyframes spinRight {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-} */
-
-/* .preloader {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    z-index: 9999;
-} */
-
-
-/* .preloader.hide {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.6s ease;
-} */
-
-
+/* Меню с чаем и кофе */
 
 .mobi-menu-page {
     width: 100%;
@@ -506,11 +441,10 @@ ease;
     color: #2d2d2d;
 }
 
-/* Левая картинка */
 .mobi-left-image {
     position: relative;
     width: 53%;
-    height: 100vh; /* картинка всегда на всю высоту */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -520,28 +454,22 @@ ease;
     object-fit: cover;
 }
 
-/* Текст на изображении */
 .mobi-cafe-title {
     position: absolute;
     bottom: 27px;
-    left: 26px;
+        left: 4%;
     color: white;
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px black;
+    text-shadow: 4px 0 rgb(0 0 0), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(0 0 0);
 }
 
-/* Правый блок — меню */
 .mobi-right-block {
     width: 72%;
     padding: 16px 18px 16px;
 }
 
-
-
-
-/* Заголовки */
 .mobi-section h2 {
     font-size: 20px;
     margin-top: 10px;
@@ -550,7 +478,6 @@ ease;
     letter-spacing: 4px;
 }
 
-/* Пункты меню */
 .mobi-item {
     display: flex;
     justify-content: space-between;
@@ -567,7 +494,6 @@ ease;
     margin: 0;
 }
 
-/* Мобильная адаптация */
 @media (max-width: 480px) {
     .mobi-section h2 {
         font-size: 18px;
@@ -578,15 +504,35 @@ ease;
     }
 }
 
+@media (max-width: 374px) and (min-width:321px) {
+    .mobi-left-image {
+    position: relative;
+    width: 53%;
+    height: 100vh;
+    overflow: hidden;
+}
+}
+
 @media (max-width: 320px) {
-    .mobi-left-image img {
-    width: 103%;
-    height: 990px;
-    }
+    .mobi-left-image {
+    position: relative;
+    width: 53%;
+    height: 100vh;
+    overflow: hidden;
+}
+.mobi-cafe-title {
+    position: absolute;
+    bottom: 27px;
+    left: 2%;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 }
 
 
-
+/* Подвал */
 
 .footer {
     width: 100%;
@@ -611,7 +557,7 @@ ease;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-
+/* Перевод */
 
 .lang-btn {
     position: absolute;
@@ -640,7 +586,6 @@ ease;
     margin-top: 2px;
 }
 
-/* Выпадающее меню */
 .lang-menu {
     position: fixed;
     top: 65px; 
