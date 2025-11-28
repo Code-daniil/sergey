@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Aladin';
+    src: url('Aladin/Aladin-Regular.ttf') format('truetype'); /* не 'ttf', а 'truetype' */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Главная страница */
 
 .body{
@@ -40,6 +48,9 @@
     padding-top: 20px;
     width: 100%;
 }
+
+
+
 
 .menu_img{
     position: relative;
@@ -156,17 +167,16 @@
 }
 .scroll-container .screen .toggle:checked~.product-name .product-font1 {
     text-align: left;
-    width: 154px;
     left: 8px;
-    margin: 39px 220px 0px 50px;
+    margin: 39px 0px 0px 50px;
 }
 
 .product-font1 {
     transition: all 0.5s ease;
     margin: 216px 43px 33px 60px;
-    font-size: 42px;
+    font-size: 49px;
     color: rgb(255, 255, 255);
-    text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
+    text-shadow: 4px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .product-font {
@@ -178,11 +188,17 @@
 }
 
 .ingredients {
+    list-style: none;
     z-index: 1000;
     transition: all 0.5s ease;
-    color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 rgb(50, 50, 50), 0 1px rgb(50, 50, 50), 1px 0 rgb(50, 50, 50), 0 -1px rgb(50, 50, 50);
     opacity: 0;
     transform: translateX(50px);
+}
+.ingredients li::before {
+    margin-right: 15px;
+    content: "♥";   /* или "❤" или "\2665" */
 }
 
 .svg-container {
@@ -267,9 +283,9 @@
 }
 
 .scroll-container .screen .toggle:checked~.product-name .ingredients {
-    margin: 30px 80px -20px 22px;
+    margin: 22px 97px -30px 0px;
     z-index: 1000;
-    font-size: 25px;
+    font-size: 30px;
     opacity: 1;
     text-align: left;
 }
@@ -361,8 +377,8 @@
 
 .back-btn::before {
     content: "←";
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 34px;
+    font-weight: 700;
     color: white;
     position: absolute;
     top: 47%;
@@ -431,6 +447,33 @@
 }
 
 /* Меню с чаем и кофе */
+.mobi-menu-page1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: "Montserrat", sans-serif;
+    background: #f2efed;
+    color: #2d2d2d;
+    flex-wrap: wrap;
+    margin-top: 49px;
+}
+
+.mobi-section1{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    width: 44%;
+}
+
+.mobi-section1 h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: 4px;
+}
 
 .mobi-menu-page {
     width: 100%;
@@ -457,7 +500,7 @@
 .mobi-cafe-title {
     position: absolute;
     bottom: 27px;
-        left: 4%;
+    left: 4%;
     color: white;
     font-size: 28px;
     font-weight: 700;
@@ -483,10 +526,13 @@
     justify-content: space-between;
     padding: 6px 0;
     font-size: 16px;
+    font-family: "Aladin", system-ui;
+    align-items: center;
 }
 
 .mobi-item span{
     margin: 0;
+    font-size: 18px;
 }
 
 .mobi-item b {
@@ -525,9 +571,18 @@
     bottom: 27px;
     left: 2%;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 2px;
+}
+.mobi-item span{
+    margin: 0;
+    font-size: 13px;
+}
+.mobi-item b {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
 }
 }
 
